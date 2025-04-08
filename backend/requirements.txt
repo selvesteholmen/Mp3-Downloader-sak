@@ -1,0 +1,8 @@
+uvicorn~=0.34.0
+fastapi~=0.115.8
+pydantic~=2.10.6
+pytube~=15.0.0
+pydub~=0.25.1
+yt-dlp~=2025.3.25
+tqdm~=4.67.1
+spotipy~=2.25.1
