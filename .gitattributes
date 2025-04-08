@@ -1,0 +1,6 @@
+*.py linguist-language=Python
+
+frontend/*.js linguist-language=JavaScript
+frontend/*.jsx linguist-language=JavaScript
+
+frontend/**/*.html linguist-language=HTML
