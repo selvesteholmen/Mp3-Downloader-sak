@@ -1,13 +1,13 @@
-__pycache__/
+__pycache__
 *.pyc
 *.pyo
 *.pyd
 
 venv/
-.env/
+.env
 
-.idea/
-.vscode/
+.idea
+.vscode
 
 .DS_Store
 Thumbs.db
