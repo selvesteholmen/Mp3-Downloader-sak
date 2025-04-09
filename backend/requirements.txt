@@ -6,3 +6,4 @@ pydub~=0.25.1
 yt-dlp~=2025.3.25
 tqdm~=4.67.1
 spotipy~=2.25.1
+dotenv~=1.0.0
