@@ -1,6 +1,5 @@
-*.py linguist-language=Python
-
-frontend/*.js linguist-language=JavaScript
-frontend/*.jsx linguist-language=JavaScript
-
-frontend/**/*.html linguist-language=HTML
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+/static/** linguist-vendored
+/public/** linguist-vendored
