@@ -2,10 +2,11 @@ import yt_dlp
 import os
 from datetime import datetime
 import subprocess
+from utils.ffmpeg_helper import get_ffmpeg_path
 
 
 def download_youtube_audio(url):
-    downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+    downloads_folder = os.environ.get("DOWNLOADS_PATH", os.path.join(os.path.expanduser("~"), "Downloads"))
 
     ydl_opts = {
         'format': 'bestaudio/best',
@@ -33,20 +34,13 @@ def download_youtube_audio(url):
         mp3_file = downloaded_file.replace('.webm', '.mp3')
         convert_to_mp3(downloaded_file, mp3_file)
         os.remove(downloaded_file)
-
         print(f"Downloaded and converted audio: {mp3_file}")
     else:
         print(f"Downloaded audio: {downloaded_file}")
 
 
 def convert_to_mp3(input_file, output_file):
-    ffmpeg_path = os.path.join(
-        os.path.dirname(__file__),
-        'ffmpeg',
-        'ffmpeg-7.1.1-essentials_build',
-        'bin',
-        'ffmpeg.exe'
-    )
+    ffmpeg_path = get_ffmpeg_path()
 
     with open(os.devnull, 'w') as devnull:
         command = [
